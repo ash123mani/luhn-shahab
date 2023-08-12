@@ -1,8 +1,6 @@
 import express, { Router } from 'express';
 import cors from 'cors';
 import { replaceTscAliasPaths } from 'tsc-alias';
-import serverless from 'serverless-http';
-import path from 'path';
 
 replaceTscAliasPaths({
   configFile: './tsconfig.json'
@@ -26,15 +24,13 @@ declare global {
     description?: string
   }
 }
-const router = Router();
+
 app.use(cors())
 app.use(responseHeaders);
 app.use(express.json());
 
 app.use('/api/healthcheck', healthCheckRouter);
 app.use('/api/validate', validateRouter);
-
-app.use('/api/', validateRouter);
 
 app.use(logError)
 app.use(returnError)
@@ -45,9 +41,6 @@ if (isDev) {
   );
 }
 
-app.use('/.netlify/functions/server', router);  // path must route to lambda
-app.use('/', (req, res) => res.sendFile(path.join(__dirname, './index.html')));
-
 process.on("unhandledRejection", (err: Error, promise) => {
   logError(err);
 
@@ -55,7 +48,4 @@ process.on("unhandledRejection", (err: Error, promise) => {
     process.exit(1)
   }
 });
-
-
-export const handler = serverless(app);
 
