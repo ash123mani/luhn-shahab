@@ -1,1 +1,0 @@
-{"version":3,"file":"resp-header.d.ts","sourceRoot":"","sources":["../../middlewares/resp-header.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,YAAY,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,SAAS,CAAC;AAE/D,QAAA,MAAM,eAAe,QAAS,OAAO,OAAO,QAAQ,QAAQ,YAAY,SAYvE,CAAC;AAEF,eAAe,eAAe,CAAC"}

@@ -6,7 +6,8 @@
   "type": "commonjs",
   "scripts": {
     "dev": "tsc && tsc-alias && nodemon dist/index.js",
-    "watch": "tsc -b -w --preserveWatchOutput  && NODE_ENV=development nodemon dist/index.js"
+    "watch": "tsc -b -w --preserveWatchOutput  && NODE_ENV=development nodemon dist/index.js",
+    "build": "tsc && tsc-alias && nodemon dist/index.js"
   },
   "dependencies": {
     "@types/express": "^4.17.17",
