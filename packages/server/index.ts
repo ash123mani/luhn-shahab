@@ -1,6 +1,7 @@
-import express from 'express';
+import express, { Router } from 'express';
 import cors from 'cors';
 import { replaceTscAliasPaths } from 'tsc-alias';
+import serverless from 'serverless-http';
 
 replaceTscAliasPaths({
   configFile: './tsconfig.json'
@@ -11,7 +12,7 @@ import { healthCheckRouter } from '@/routes/healthcheck';
 import { validateRouter } from '@/routes/validate';
 import { logError, returnError, isOperationalError } from '@/errors';
 
-const app = express();
+export const app = express();
 const PORT = process.env.PORT || 5000;
 
 declare global {
@@ -21,13 +22,15 @@ declare global {
     description?: string
   }
 }
-
+const router = Router();
 app.use(cors())
 app.use(responseHeaders);
 app.use(express.json());
 
 app.use('/api/healthcheck', healthCheckRouter);
 app.use('/api/validate', validateRouter);
+
+app.use('/api/', validateRouter);
 
 app.use(logError)
 app.use(returnError)
@@ -44,4 +47,6 @@ process.on("unhandledRejection", (err: Error, promise) => {
   }
 });
 
+
+export const handler = serverless(app);
 
