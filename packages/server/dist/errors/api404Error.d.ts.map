@@ -1,0 +1,1 @@
+{"version":3,"file":"api404Error.d.ts","sourceRoot":"","sources":["../../errors/api404Error.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAExC,qBAAa,WAAY,SAAQ,SAAS;gBAEtC,IAAI,GAAE,MAAkC,EACxC,UAAU,GAAE,MAAkC,EAC9C,WAAW,GAAE,MAAqB,EAClC,aAAa,GAAE,OAAc;CAIhC"}

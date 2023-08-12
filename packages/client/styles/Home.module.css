@@ -1,0 +1,34 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.cc-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+.cc-form__input {
+  padding: 8px 8px;
+}
+
+.cc-form__btn {
+  height: 32px;
+  margin-top: 12px;
+}
+
+.cc-form__success-msg {
+  color: var(--success);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
+
+

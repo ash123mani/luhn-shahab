@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "lerna run build --stream",
+    "clean": "lerna run clean --parallel",
+    "dev": "lerna run --parallel dev"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^7.1.4",
+    "typescript": "^5.1.6"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT"
+}
