@@ -12,7 +12,7 @@ import { validateRouter } from '@/routes/validate';
 import { logError, returnError, isOperationalError } from '@/errors';
 
 export const app = express();
-const PORT = process.env.PORT || 5001;
+const PORT = 5001;
 const isDev = process.env.NODE_ENV === 'development'
 
 declare global {
