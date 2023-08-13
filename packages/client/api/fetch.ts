@@ -1,4 +1,5 @@
 const basUrl = process.env.NODE_ENV !== 'production' ? 'http://localhost:5000' : 'http://3.115.123.72:5001';
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 export async function postData(endpoint = "", data = {}) {
   

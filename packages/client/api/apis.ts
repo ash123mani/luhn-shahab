@@ -1,3 +1,3 @@
 export const apis = {
-  'validate': '/api/v1'
+  'validate': '/api/validate'
 }
