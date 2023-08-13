@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "tsc && tsc-alias && nodemon dist/index.js",
     "watch": "tsc -b -w --preserveWatchOutput  && NODE_ENV=development nodemon dist/index.js",
-    "build": "netlify-lambda build",
+    "build": "netlify-lambda build"
     
   },
   "dependencies": {
