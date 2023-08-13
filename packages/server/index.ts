@@ -35,14 +35,12 @@ app.use('/api/validate', validateRouter);
 app.use(logError)
 app.use(returnError)
 
-if (isDev) {
-  const server = app.listen(PORT, () =>
-    console.log(`Sever running on port ${PORT}`)
-  );
-}
+const server = app.listen(PORT, () =>
+  console.log(`Sever running on port ${PORT}`)
+);
 
 process.on("unhandledRejection", (err: Error, promise) => {
-  logError(err);
+  server.close(() =>   logError(err));
 
   if (!isOperationalError(err)) {
     process.exit(1)
