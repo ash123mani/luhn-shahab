@@ -7,6 +7,10 @@
   min-height: 100vh;
 }
 
+.title {
+  margin-bottom: 40px;
+}
+
 .cc-form {
   display: flex;
   flex-direction: column;

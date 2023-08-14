@@ -46,6 +46,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
+        <h1 className={styles.title}>Luhn Validation</h1>
         <form className={styles['cc-form']} onSubmit={handleSubmit}>
           <Input type="text" placeholder='Enter Credit Card Number'onChange={handleInputChange} errMsg={error}/>
           <button className={styles['cc-form__btn']} disabled={validating}>{validating ? 'Validating Card...' : 'Submit'}</button>
