@@ -19,6 +19,16 @@
     Install yarn: 
     https://classic.yarnpkg.com/lang/en/docs/install
 
+    
+# Install dependencies
+```bash
+npm run install
+# or
+yarn add
+# or
+pnpm install
+```
+
 # Run Project from root directory
 ```bash
 npm run dev
@@ -32,10 +42,10 @@ https://luhn-validation.netlify.app/
 
 # Backend
 
- ## Healthcheck
+ ## Healthcheck api
 https://3e98-3-115-123-72.ngrok-free.app/api/healthcheck
 
-   ## Validate
+ ## Validate api
     
     curl --location 'https://3e98-3-115-123-72.ngrok-free.app/api/validate' \
     --header 'Content-Type: application/json' \
